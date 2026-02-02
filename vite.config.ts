@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig(() => {
   return {
+    base: "/helio3tech/",
     server: {
       port: 3000,
     },
