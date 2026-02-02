@@ -47,11 +47,11 @@ const modules = [
     title: "Telemedicina",
     description: "Vídeo consultas integradas ao PEP sem necessidade de apps externos.",
     preview: (
-       <div className="mt-4 mx-auto w-24 h-16 bg-white/5 border border-white/10 rounded relative flex items-center justify-center">
-         <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
-           <div className="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div>
-         </div>
-       </div>
+      <div className="mt-4 mx-auto w-24 h-16 bg-white/5 border border-white/10 rounded relative flex items-center justify-center">
+        <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div>
+        </div>
+      </div>
     )
   },
   {
@@ -79,19 +79,13 @@ const GridSection: React.FC = () => {
           <p className="text-gray-400">
             Copie, cole e configure. O Helio3 é modular, permitindo que você ative apenas o que precisa.
           </p>
-          <div className="mt-8">
-            <button className="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold">
-              Ver todos os módulos
-            </button>
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {modules.map((mod, idx) => (
             <div key={idx} className="group relative bg-[#0E0E10] border border-white/5 rounded-xl p-6 hover:border-white/20 transition-all hover:-translate-y-1 overflow-hidden">
-              {/* Hover Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-              
+
               <div className="relative z-10">
                 <div className="mb-4">{mod.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{mod.title}</h3>

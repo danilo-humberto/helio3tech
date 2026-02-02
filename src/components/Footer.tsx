@@ -1,30 +1,25 @@
 import React from 'react';
-import { Activity } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
     <footer className="py-20 bg-black border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <h2 className="text-2xl font-semibold text-white mb-6 md:mb-0">
-              Integre com qualquer serviço
-            </h2>
-            <div className="flex gap-8 grayscale opacity-50">
-               {/* Replaced Logos with text for simplicity/compliance with rules, but styled like logos */}
-               <span className="text-xl font-bold text-white">AWS</span>
-               <span className="text-xl font-bold text-white">Azure</span>
-               <span className="text-xl font-bold text-white">Google Cloud</span>
-               <span className="text-xl font-bold text-white">Oracle</span>
-            </div>
+          <h2 className="text-2xl font-semibold text-white mb-6 md:mb-0">
+            Integre com qualquer serviço
+          </h2>
+          <div className="flex gap-8 grayscale opacity-50">
+            <span className="text-xl font-bold text-white">AWS</span>
+            <span className="text-xl font-bold text-white">Azure</span>
+            <span className="text-xl font-bold text-white">Google Cloud</span>
+            <span className="text-xl font-bold text-white">Oracle</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/10">
           <div>
             <div className="flex items-center gap-2 mb-6">
-               <div className="w-6 h-6 rounded bg-cyan-600 flex items-center justify-center">
-                 <Activity className="text-white w-3 h-3" />
-               </div>
-               <span className="text-white font-bold">Helio3Tech</span>
+              <img src="/logo-extendida.png" alt="Logo Helio3Tech" className="w-40 h-full" />
             </div>
           </div>
           <div>
@@ -55,9 +50,9 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-20 text-center text-xs text-gray-600">
-          <p>&copy; 2024 Helio3Tech. Trazido até você por React & Tailwind.</p>
+          <p>&copy; {new Date().getFullYear()} Helio3Tech. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

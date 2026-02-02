@@ -25,20 +25,20 @@ const features = [
     title: 'Analytics Financeiro',
     description: 'Veja a saúde financeira do hospital em tempo real com projeções baseadas em ocupação.',
     content: (
-       <div className="space-y-3">
-         <div className="flex justify-between items-center">
-            <span className="text-xs text-gray-400">Receita Projetada</span>
-            <span className="text-sm text-green-400 font-mono">+12.5%</span>
-         </div>
-         <div className="w-full h-32 bg-gradient-to-t from-green-500/20 to-transparent rounded border-b border-green-500/50 relative">
-            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-green-500"></div>
-            {/* Simple CSS bars */}
-            <div className="absolute bottom-0 left-[10%] w-[10%] h-[40%] bg-green-500/30"></div>
-            <div className="absolute bottom-0 left-[30%] w-[10%] h-[60%] bg-green-500/30"></div>
-            <div className="absolute bottom-0 left-[50%] w-[10%] h-[50%] bg-green-500/30"></div>
-            <div className="absolute bottom-0 left-[70%] w-[10%] h-[80%] bg-green-500/30"></div>
-         </div>
-       </div>
+      <div className="space-y-3">
+        <div className="flex justify-between items-center">
+          <span className="text-xs text-gray-400">Receita Projetada</span>
+          <span className="text-sm text-green-400 font-mono">+12.5%</span>
+        </div>
+        <div className="w-full h-32 bg-gradient-to-t from-green-500/20 to-transparent rounded border-b border-green-500/50 relative">
+          <div className="absolute bottom-0 left-0 w-full h-[1px] bg-green-500"></div>
+          {/* Simple CSS bars */}
+          <div className="absolute bottom-0 left-[10%] w-[10%] h-[40%] bg-green-500/30"></div>
+          <div className="absolute bottom-0 left-[30%] w-[10%] h-[60%] bg-green-500/30"></div>
+          <div className="absolute bottom-0 left-[50%] w-[10%] h-[50%] bg-green-500/30"></div>
+          <div className="absolute bottom-0 left-[70%] w-[10%] h-[80%] bg-green-500/30"></div>
+        </div>
+      </div>
     )
   },
   {
@@ -68,17 +68,15 @@ const FeaturesTabs: React.FC = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12">
-        {/* Sidebar */}
         <div className="md:col-span-4 space-y-2">
           {features.map((f) => (
             <button
               key={f.id}
               onClick={() => setActive(f)}
-              className={`w-full text-left p-4 rounded-lg transition-all duration-200 border ${
-                active.id === f.id 
-                  ? 'bg-white/10 border-white/10 text-white' 
+              className={`w-full text-left p-4 rounded-lg transition-all duration-200 border ${active.id === f.id
+                  ? 'bg-white/10 border-white/10 text-white'
                   : 'border-transparent text-gray-500 hover:text-gray-300'
-              }`}
+                }`}
             >
               <div className="font-semibold text-sm mb-1">{f.title}</div>
               <div className="text-xs opacity-70 leading-relaxed">{f.description}</div>
@@ -86,23 +84,20 @@ const FeaturesTabs: React.FC = () => {
           ))}
         </div>
 
-        {/* Preview Window */}
         <div className="md:col-span-8">
           <div className="bg-[#111] border border-white/10 rounded-xl p-1 h-[400px] flex flex-col shadow-2xl relative overflow-hidden">
-            {/* Fake Window Controls */}
             <div className="h-8 bg-white/5 border-b border-white/5 flex items-center px-3 gap-2">
-               <div className="w-2.5 h-2.5 rounded-full bg-white/20"></div>
-               <div className="w-2.5 h-2.5 rounded-full bg-white/20"></div>
-               <div className="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-white/20"></div>
             </div>
-            
-            {/* Content Container */}
+
             <div className="flex-1 p-8 flex items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-800/20 via-black to-black">
               <div className="w-full max-w-md bg-black/50 backdrop-blur border border-white/10 rounded-xl p-6 shadow-2xl">
-                 <div className="text-xs text-gray-500 mb-4 border-b border-white/5 pb-2 uppercase tracking-wide">
-                   Output do Sistema
-                 </div>
-                 {active.content}
+                <div className="text-xs text-gray-500 mb-4 border-b border-white/5 pb-2 uppercase tracking-wide">
+                  Output do Sistema
+                </div>
+                {active.content}
               </div>
             </div>
           </div>

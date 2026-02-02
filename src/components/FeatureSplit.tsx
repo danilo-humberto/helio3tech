@@ -43,32 +43,29 @@ const parsed = helio.hl7.parse(hl7Message);
   return (
     <section id="platform" className="py-24 bg-black relative">
       <div className="max-w-6xl mx-auto px-6">
-        
-        {/* Header */}
+
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Interoperabilidade nativa
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Conecte-se com legados ou o futuro. Nossa engine suporta HL7 v2, v3 e FHIR R4 
+            Conecte-se com legados ou o futuro. Nossa engine suporta HL7 v2, v3 e FHIR R4
             com validação em tempo real e conformidade LGPD.
           </p>
-          
+
           <div className="flex justify-center mt-8">
             <div className="bg-white/5 p-1 rounded-full border border-white/10 inline-flex">
-              <button 
+              <button
                 onClick={() => setActiveTab('fhir')}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                  activeTab === 'fhir' ? 'bg-white/10 text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'
-                }`}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeTab === 'fhir' ? 'bg-white/10 text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'
+                  }`}
               >
                 FHIR JSON
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab('hl7')}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                  activeTab === 'hl7' ? 'bg-white/10 text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'
-                }`}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeTab === 'hl7' ? 'bg-white/10 text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'
+                  }`}
               >
                 HL7 V2
               </button>
@@ -76,12 +73,10 @@ const parsed = helio.hl7.parse(hl7Message);
           </div>
         </div>
 
-        {/* Split Panel */}
         <div className="grid lg:grid-cols-2 gap-0 border border-white/10 rounded-xl overflow-hidden bg-[#0A0A0A]">
-          
-          {/* Left: Code Editor */}
+
           <div className="p-0 border-b lg:border-b-0 lg:border-r border-white/10 relative group">
-            <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="absolute top-12 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
               <button className="p-2 text-gray-500 hover:text-white bg-white/5 rounded-md">
                 <Copy size={16} />
               </button>
@@ -101,13 +96,10 @@ const parsed = helio.hl7.parse(hl7Message);
             </div>
           </div>
 
-          {/* Right: Preview Visual */}
           <div className="relative bg-gradient-to-br from-[#0A0A0A] to-[#111] flex items-center justify-center p-8 h-[400px]">
-            
-            {/* Ambient Background */}
+
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-900/10 to-transparent opacity-50"></div>
 
-            {/* The Card Component */}
             <div className="w-full max-w-sm bg-black border border-white/10 rounded-2xl shadow-2xl p-6 relative z-10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-lg font-bold text-white">
@@ -120,7 +112,7 @@ const parsed = helio.hl7.parse(hl7Message);
                   </div>
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-white/5">
                   <span className="text-gray-500 text-sm">Prontuário</span>
@@ -144,7 +136,6 @@ const parsed = helio.hl7.parse(hl7Message);
               </button>
             </div>
 
-            {/* Decoration Lines */}
             <div className="absolute left-0 top-1/2 w-8 h-[1px] bg-white/20"></div>
             <div className="absolute right-0 top-1/2 w-8 h-[1px] bg-white/20"></div>
           </div>

@@ -27,24 +27,19 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-        isScrolled || mobileMenuOpen ? 'bg-black/70 backdrop-blur-md border-white/10' : 'bg-transparent border-transparent'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${isScrolled || mobileMenuOpen ? 'bg-black/70 backdrop-blur-md border-white/10' : 'bg-transparent border-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a 
-          href="#" 
+        <a
+          href="#"
           onClick={scrollToTop}
           className="flex items-center gap-2 cursor-pointer group"
         >
-          <span className="font-bold text-lg tracking-tight text-white group-hover:text-cyan-400 transition-colors">
-            Helio3Tech
-          </span>
+          <img src="/logo-extendida.png" alt="Logo Helio3Tech" className="w-40 h-full" />
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
           {navItems.map((item) => (
             <a
@@ -57,15 +52,7 @@ const Header: React.FC = () => {
           ))}
         </nav>
 
-        {/* Actions */}
-        <div className="hidden md:flex items-center gap-4">
-           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-            <Github className="w-5 h-5" />
-           </a>
-        </div>
-
-        {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden text-gray-300"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -73,7 +60,6 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-black border-b border-white/10 p-6 flex flex-col gap-4 min-h-screen">
           {navItems.map((item) => (

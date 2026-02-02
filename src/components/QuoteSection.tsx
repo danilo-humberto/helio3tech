@@ -9,7 +9,7 @@ const QuoteSection: React.FC = () => {
         </h3>
         <div className="flex items-center justify-center gap-4">
           <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden">
-            <img src="https://picsum.photos/100/100" alt="Avatar" className="w-full h-full object-cover opacity-80" />
+            <img src="/foto-doutor.png" alt="foto do doutor" className="w-full h-full object-cover object-top opacity-80" />
           </div>
           <div className="text-left">
             <div className="text-white text-sm font-medium">Dr. Roberto Almeida</div>

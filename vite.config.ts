@@ -3,9 +3,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
   return {
-    base: "/helio3tech/",
+    base: mode === 'production' ? '/helio3tech/' : '/',
     server: {
       port: 3000,
     },
