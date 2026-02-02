@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/10">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <img src="/logo-extendida.png" alt="Logo Helio3Tech" className="w-40 h-full" />
+              <img src={`${import.meta.env.BASE_URL}logo-extendida.png`} alt="Logo Helio3Tech" className="w-40 h-full" />
             </div>
           </div>
           <div>

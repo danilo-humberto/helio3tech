@@ -37,7 +37,7 @@ const Header: React.FC = () => {
           onClick={scrollToTop}
           className="flex items-center gap-2 cursor-pointer group"
         >
-          <img src="/logo-extendida.png" alt="Logo Helio3Tech" className="w-40 h-full" />
+          <img src={`${import.meta.env.BASE_URL}logo-extendida.png`} alt="Logo Helio3Tech" className="w-40 h-full" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
